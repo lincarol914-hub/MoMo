@@ -60,8 +60,8 @@ export function CTARow({
 }) {
   return (
     <div className={cn("flex flex-col sm:flex-row gap-3", className)}>
-      <Button asChild variant={dark ? "accent" : "atlas"} size="lg">
-        <Link to={primaryHref}>{primaryLabel} <ArrowUpRight className="h-4 w-4" /></Link>
+      <Button asChild variant={dark ? "accent" : "atlas"} size="lg" className="group">
+        <Link to={primaryHref}>{primaryLabel} <ArrowUpRight className="h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></Link>
       </Button>
       <Button asChild variant={dark ? "atlas-outline" : "outline"} size="lg">
         <Link to={secondaryHref}>{secondaryLabel}</Link>

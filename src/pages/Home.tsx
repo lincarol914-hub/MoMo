@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CTARow, SectionHeader } from "@/components/atlas/Bits";
 import { HeroDashboard } from "@/components/atlas/HeroDashboard";
 import { Reveal } from "@/components/Reveal";
+import { CountUp } from "@/components/CountUp";
 import logoAnimation from "@/assets/momo-logo-animation.mp4";
 
 export default function Home() {
@@ -109,6 +110,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* METRICS */}
+      <section className="section pt-0">
+        <div className="container-atlas">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px overflow-hidden rounded-2xl border border-border bg-border">
+            {[
+              { value: 60, suffix: "s", label: "Average time to a full analysis" },
+              { value: 12, suffix: "+", label: "Types of cover compared" },
+              { value: 3, suffix: "", label: "Steps to get covered" },
+              { value: 100, suffix: "%", label: "FCA-aware process" },
+            ].map((m, i) => (
+              <Reveal key={m.label} delay={i * 110}>
+                <div className="h-full bg-card p-8 text-center md:text-left">
+                  <div className="font-display text-4xl md:text-5xl font-medium text-ink tracking-tight">
+                    <CountUp end={m.value} suffix={m.suffix} />
+                  </div>
+                  <div className="mt-2 text-sm text-muted-foreground leading-relaxed">{m.label}</div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* DASHBOARD PREVIEW */}
       <section className="section pt-0">
         <div className="container-atlas">
@@ -128,6 +152,37 @@ export default function Home() {
             <Reveal delay={140} className="lg:col-span-7">
               <HeroDashboard />
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS — step-by-step process timeline */}
+      <section className="section pt-0">
+        <div className="container-atlas">
+          <Reveal>
+            <SectionHeader
+              eyebrow="How it works"
+              title={<>Covered in <span className="text-accent italic">four calm steps.</span></>}
+              description="No long forms, no pressure. A clear path from question to cover."
+            />
+          </Reveal>
+          <div className="relative mt-16 grid gap-10 md:grid-cols-4">
+            {/* connecting line behind the step nodes */}
+            <div className="hidden md:block absolute left-0 right-0 top-6 h-px bg-border" aria-hidden="true" />
+            {[
+              { title: "Tell us about your business", body: "Drop in your company website - that's it. No long questionnaires." },
+              { title: "Get your instant analysis", body: "See the cover you likely need, the gaps to close and fair pricing." },
+              { title: "Review with a human", body: "An expert sense-checks your recommendations. No jargon, no pressure." },
+              { title: "Get covered, your way", body: "Bind the right policies and pay by card, bank transfer or crypto." },
+            ].map((s, i) => (
+              <Reveal key={s.title} delay={i * 150} className="relative">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card font-display text-lg font-medium text-accent shadow-card">
+                  {i + 1}
+                </div>
+                <h3 className="mt-5 font-display text-xl text-ink tracking-tight">{s.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.body}</p>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -194,8 +249,8 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="mt-9">
-                  <Button asChild variant="atlas" size="lg">
-                    <Link to="/insurance-analysis">Run free analysis <ArrowUpRight className="h-4 w-4" /></Link>
+                  <Button asChild variant="atlas" size="lg" className="group">
+                    <Link to="/insurance-analysis">Run free analysis <ArrowUpRight className="h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></Link>
                   </Button>
                 </div>
               </Reveal>
@@ -237,7 +292,7 @@ export default function Home() {
               { tag: "Professional Services", body: "PI, management liability and cyber done right." },
             ].map((s, i) => (
               <Reveal key={s.tag} delay={i * 110}>
-                <div className="group rounded-2xl border border-border bg-card p-6 hover:border-accent/50 hover:shadow-elev transition-all">
+                <div className="group h-full rounded-2xl border border-border bg-card p-6 hover:border-accent/50 hover:shadow-elev hover:-translate-y-0.5 transition-all duration-300">
                   <div className="text-[10px] uppercase tracking-[0.2em] font-bold text-accent">{s.tag}</div>
                   <p className="mt-4 text-ink leading-relaxed">{s.body}</p>
                 </div>
@@ -273,7 +328,7 @@ export default function Home() {
 
 function ValueCard({ icon: Icon, title, body }: { icon: React.ComponentType<{className?:string}>; title: string; body: string }) {
   return (
-    <div className="group relative rounded-2xl border border-border bg-card p-8 shadow-card hover:shadow-elev hover:border-accent/40 hover:-translate-y-0.5 transition-all">
+    <div className="group relative h-full rounded-2xl border border-border bg-card p-8 shadow-card hover:shadow-elev hover:border-accent/40 hover:-translate-y-0.5 transition-all duration-300">
       <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
         <Icon className="h-5 w-5" />
       </div>
