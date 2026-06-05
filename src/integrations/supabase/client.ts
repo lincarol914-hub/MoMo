@@ -2,8 +2,14 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+// Fall back to the project's public URL / a harmless placeholder key when the
+// build env doesn't provide them (e.g. a static GitHub Pages build without
+// Supabase secrets). This keeps `createClient` from throwing at module load and
+// white-screening the whole app; backend calls just no-op / fall back to mock.
+const SUPABASE_URL =
+  import.meta.env.VITE_SUPABASE_URL ?? "https://hfwhwmkhkvlxkgkrvrpj.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY =
+  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ?? "public-anon-key-unset";
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
