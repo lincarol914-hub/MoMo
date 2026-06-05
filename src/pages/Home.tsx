@@ -13,8 +13,8 @@ export default function Home() {
       <section className="relative overflow-hidden bg-[#FFFDF8]">
         <div className="container-atlas relative pt-24 md:pt-32 pb-24 md:pb-32">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-8 items-center">
-            {/* LEFT — copy */}
-            <div className="text-center lg:text-left">
+            {/* LEFT — copy (layered above the video so it stays readable) */}
+            <div className="relative z-10 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground backdrop-blur">
                 <Sparkles className="h-3 w-3 text-accent" />
                 Business insurance, finally simple
@@ -40,7 +40,7 @@ export default function Home() {
 
             {/* RIGHT — enlarged animated brand logo (on top on mobile). Same
                 background as the hero, so it reads as one with the page */}
-            <div className="order-first lg:order-none -mx-6 sm:mx-0 lg:ml-auto w-full lg:max-w-2xl lg:-mr-12 xl:-mr-24">
+            <div className="order-first lg:order-none relative z-0 -mx-6 sm:mx-0 w-full lg:max-w-3xl lg:-my-16 lg:-ml-24 lg:-mr-16 xl:-mr-28">
               <video
                 className="aspect-video w-full object-contain bg-[#FFFDF8]"
                 style={{
