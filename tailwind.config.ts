@@ -12,8 +12,16 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui"],
-        display: ["Space Grotesk", "Inter", "ui-sans-serif", "system-ui"],
+        sans: [
+          "Inter Variable", "SF Pro Display", "-apple-system", "system-ui",
+          "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans",
+          "Helvetica Neue", "sans-serif",
+        ],
+        display: [
+          "Inter Variable", "SF Pro Display", "-apple-system", "system-ui",
+          "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans",
+          "Helvetica Neue", "sans-serif",
+        ],
         mono: ["JetBrains Mono", "ui-monospace"],
       },
       colors: {
