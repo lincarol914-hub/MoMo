@@ -19,18 +19,18 @@ export default function Home() {
           <div className="hero-light-alt absolute -bottom-1/4 right-[10%] h-[50vh] w-[50vh] rounded-full bg-accent/[0.04] blur-[130px]" />
         </div>
         <div className="container-atlas relative pt-24 md:pt-32 pb-24 md:pb-32">
-          <div className="grid lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-6 items-center">
+          <div className="grid lg:grid-cols-[1.35fr_1fr] gap-8 lg:gap-4 items-center">
             {/* LEFT — copy (layered above the video so it stays readable) */}
             <div className="relative z-10 text-center lg:text-left">
               <div className="hero-reveal inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground backdrop-blur" style={{ animationDelay: "0.05s" }}>
                 <Sparkles className="h-3 w-3 text-accent" />
                 Business insurance, finally simple
               </div>
-              <h1 className="mt-7 font-display text-6xl md:text-7xl lg:text-[92px] leading-[0.98] font-medium tracking-tight text-balance text-ink lg:whitespace-nowrap">
+              <h1 className="mt-7 font-display text-6xl md:text-7xl lg:text-[104px] leading-[0.95] font-medium tracking-tight text-balance text-ink lg:whitespace-nowrap">
                 <span className="hero-reveal block" style={{ animationDelay: "0.18s" }}>Cover that</span>
                 <span className="hero-reveal block text-accent italic" style={{ animationDelay: "0.32s" }}>actually fits.</span>
               </h1>
-              <p className="hero-reveal mt-7 text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0" style={{ animationDelay: "0.46s" }}>
+              <p className="hero-reveal mt-7 text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0" style={{ animationDelay: "0.46s" }}>
                 Momo finds the right business insurance for your company in minutes. Clearer cover, fairer prices, no jargon.
               </p>
               <div className="hero-reveal mt-9 flex justify-center lg:justify-start" style={{ animationDelay: "0.6s" }}>
@@ -46,7 +46,7 @@ export default function Home() {
 
             {/* RIGHT — enlarged animated brand logo (on top on mobile). Same
                 background as the hero, so it reads as one with the page */}
-            <div className="hero-reveal order-first lg:order-none relative z-0 -mx-6 sm:mx-0 w-full lg:max-w-3xl lg:-my-20 lg:ml-6 lg:-mr-24 xl:-mr-40" style={{ animationDelay: "0.1s", animationDuration: "1.4s" }}>
+            <div className="hero-reveal order-first lg:order-none relative z-0 -mx-6 sm:mx-0 w-full lg:max-w-4xl lg:-my-24 lg:ml-0 lg:-mr-28 xl:-mr-44" style={{ animationDelay: "0.1s", animationDuration: "1.4s" }}>
               <video
                 className="aspect-video w-full object-contain bg-[#FFFDF8]"
                 style={{
