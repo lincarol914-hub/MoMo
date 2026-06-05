@@ -4,12 +4,13 @@ import type { Database } from './types';
 
 // Fall back to the project's public URL / a harmless placeholder key when the
 // build env doesn't provide them (e.g. a static GitHub Pages build without
-// Supabase secrets). This keeps `createClient` from throwing at module load and
-// white-screening the whole app; backend calls just no-op / fall back to mock.
+// Supabase secrets). Use `||` (not `??`) so an empty-string env var — which is
+// what CI passes for an unset secret — also falls back instead of being handed
+// to createClient, which throws on an empty key and white-screens the app.
 const SUPABASE_URL =
-  import.meta.env.VITE_SUPABASE_URL ?? "https://hfwhwmkhkvlxkgkrvrpj.supabase.co";
+  import.meta.env.VITE_SUPABASE_URL || "https://hfwhwmkhkvlxkgkrvrpj.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY =
-  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ?? "public-anon-key-unset";
+  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || "public-anon-key-unset";
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
