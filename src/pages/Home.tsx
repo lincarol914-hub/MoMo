@@ -43,6 +43,14 @@ export default function Home() {
             <div className="order-first lg:order-none -mx-6 sm:mx-0 lg:-mr-8 xl:-mr-16">
               <video
                 className="aspect-video w-full object-contain bg-[#FFFDF8]"
+                style={{
+                  // Soft-fade the edges to transparent so the video melts into
+                  // the background. Center stays fully opaque; edges feather out.
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse at center, #000 50%, rgba(0,0,0,0.5) 75%, transparent 95%)",
+                  maskImage:
+                    "radial-gradient(ellipse at center, #000 50%, rgba(0,0,0,0.5) 75%, transparent 95%)",
+                }}
                 src={logoAnimation}
                 autoPlay
                 muted
