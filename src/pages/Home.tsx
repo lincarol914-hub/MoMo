@@ -48,7 +48,7 @@ export default function Home() {
                 background as the hero, so it reads as one with the page */}
             <div className="hero-reveal order-first lg:order-none relative z-0 -mx-6 sm:mx-0 w-full lg:max-w-7xl lg:-my-32 lg:ml-12 lg:-mr-48 xl:-mr-80" style={{ animationDelay: "0.1s", animationDuration: "1.4s" }}>
               <video
-                className="aspect-video w-full object-contain bg-[#FFFDF8]"
+                className="aspect-video w-full object-contain bg-[#FFFDF8] origin-center lg:scale-[1.8]"
                 style={{
                   // Strong feather on ALL four edges (left/right AND top/bottom).
                   // Two linear gradients are intersected so a pixel only shows
