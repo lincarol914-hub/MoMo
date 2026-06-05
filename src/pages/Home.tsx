@@ -3,6 +3,7 @@ import { ArrowUpRight, Sparkles, Shield, Zap, Scale, Check, Bitcoin, Wallet, Cre
 import { Button } from "@/components/ui/button";
 import { CTARow, SectionHeader } from "@/components/atlas/Bits";
 import { HeroDashboard } from "@/components/atlas/HeroDashboard";
+import { Reveal } from "@/components/Reveal";
 import logoAnimation from "@/assets/momo-logo-animation.mp4";
 
 export default function Home() {
@@ -75,27 +76,35 @@ export default function Home() {
       {/* VALUE PROPS */}
       <section className="section">
         <div className="container-atlas">
-          <SectionHeader
-            eyebrow="Why Momo"
-            title={<>Insurance that <span className="text-accent italic">works for you.</span></>}
-            description="Built for modern businesses who want clarity, speed and cover that genuinely matches their risk."
-          />
+          <Reveal>
+            <SectionHeader
+              eyebrow="Why Momo"
+              title={<>Insurance that <span className="text-accent italic">works for you.</span></>}
+              description="Built for modern businesses who want clarity, speed and cover that genuinely matches their risk."
+            />
+          </Reveal>
           <div className="mt-16 grid md:grid-cols-3 gap-5">
-            <ValueCard
-              icon={Zap}
-              title="Minutes, not weeks"
-              body="Tell us about your business once. Get a clear picture of what cover you need and what it should cost - fast."
-            />
-            <ValueCard
-              icon={Shield}
-              title="Cover that fits"
-              body="No generic packages. We match your actual exposures to the right policies, and flag the gaps most brokers miss."
-            />
-            <ValueCard
-              icon={Scale}
-              title="Fair, transparent pricing"
-              body="See what you're paying for and why. We negotiate with insurers so you don't pay for cover you don't need."
-            />
+            <Reveal delay={0}>
+              <ValueCard
+                icon={Zap}
+                title="Minutes, not weeks"
+                body="Tell us about your business once. Get a clear picture of what cover you need and what it should cost - fast."
+              />
+            </Reveal>
+            <Reveal delay={120}>
+              <ValueCard
+                icon={Shield}
+                title="Cover that fits"
+                body="No generic packages. We match your actual exposures to the right policies, and flag the gaps most brokers miss."
+              />
+            </Reveal>
+            <Reveal delay={240}>
+              <ValueCard
+                icon={Scale}
+                title="Fair, transparent pricing"
+                body="See what you're paying for and why. We negotiate with insurers so you don't pay for cover you don't need."
+              />
+            </Reveal>
           </div>
         </div>
       </section>
@@ -104,7 +113,7 @@ export default function Home() {
       <section className="section pt-0">
         <div className="container-atlas">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5">
+            <Reveal className="lg:col-span-5">
               <div className="eyebrow text-muted-foreground">
                 <span className="h-px w-6 bg-muted-foreground/40" />
                 Live picture
@@ -115,10 +124,10 @@ export default function Home() {
               <p className="mt-5 text-lg text-muted-foreground max-w-md">
                 Cover, quotes, renewals and gaps in a single place. No more scattered PDFs or chasing brokers for updates.
               </p>
-            </div>
-            <div className="lg:col-span-7">
+            </Reveal>
+            <Reveal delay={140} className="lg:col-span-7">
               <HeroDashboard />
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -128,7 +137,7 @@ export default function Home() {
         <div className="container-atlas">
           <div className="rounded-3xl border border-border bg-card p-10 md:p-14">
             <div className="grid lg:grid-cols-12 gap-10 items-center">
-              <div className="lg:col-span-7">
+              <Reveal className="lg:col-span-7">
                 <div className="eyebrow text-muted-foreground">
                   <span className="h-px w-6 bg-muted-foreground/40" />
                   Pay your way
@@ -139,11 +148,11 @@ export default function Home() {
                 <p className="mt-5 text-lg text-muted-foreground max-w-xl">
                   Settle your premium in pounds, dollars or euros, or pay in Bitcoin, Ethereum or USDC. Same cover, your choice of rails.
                 </p>
-              </div>
+              </Reveal>
               <div className="lg:col-span-5 grid grid-cols-3 gap-3">
-                <PayTile icon={CreditCard} label="Card" sub="Visa, Mastercard, Amex" />
-                <PayTile icon={Wallet} label="Bank" sub="ACH, SEPA, Faster Payments" />
-                <PayTile icon={Bitcoin} label="Crypto" sub="BTC, ETH, USDC" accent />
+                <Reveal delay={0}><PayTile icon={CreditCard} label="Card" sub="Visa, Mastercard, Amex" /></Reveal>
+                <Reveal delay={110}><PayTile icon={Wallet} label="Bank" sub="ACH, SEPA, Faster Payments" /></Reveal>
+                <Reveal delay={220}><PayTile icon={Bitcoin} label="Crypto" sub="BTC, ETH, USDC" accent /></Reveal>
               </div>
             </div>
           </div>
@@ -157,7 +166,7 @@ export default function Home() {
             <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-accent/15 blur-3xl pointer-events-none" />
             <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-accent/10 blur-3xl pointer-events-none" />
             <div className="relative grid lg:grid-cols-12 gap-12 items-center">
-              <div className="lg:col-span-6">
+              <Reveal className="lg:col-span-6">
                 <div className="eyebrow text-muted-foreground">
                   <span className="h-px w-6 bg-muted-foreground/40" />
                   60-second analysis
@@ -189,8 +198,8 @@ export default function Home() {
                     <Link to="/insurance-analysis">Run free analysis <ArrowUpRight className="h-4 w-4" /></Link>
                   </Button>
                 </div>
-              </div>
-              <div className="lg:col-span-6">
+              </Reveal>
+              <Reveal delay={150} className="lg:col-span-6">
                 <div className="rounded-2xl border border-border bg-card p-6 shadow-elev">
                   <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
                     <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
@@ -204,7 +213,7 @@ export default function Home() {
                     <Sample label="Gaps to close" value="3" />
                   </div>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </div>
@@ -213,22 +222,26 @@ export default function Home() {
       {/* WHO WE HELP */}
       <section className="section bg-secondary/40">
         <div className="container-atlas">
-          <SectionHeader
-            eyebrow="Who we help"
-            title={<>Built for <span className="text-accent italic">modern businesses.</span></>}
-            description="From early-stage startups to established firms - if your business is moving fast, your insurance should too."
-          />
+          <Reveal>
+            <SectionHeader
+              eyebrow="Who we help"
+              title={<>Built for <span className="text-accent italic">modern businesses.</span></>}
+              description="From early-stage startups to established firms - if your business is moving fast, your insurance should too."
+            />
+          </Reveal>
           <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { tag: "SaaS & Tech", body: "Cyber, PI and IP cover for software companies." },
               { tag: "Fintech", body: "Regulated cover for payments, lending and crypto." },
               { tag: "AI Companies", body: "Specialist cover for AI products and model risk." },
               { tag: "Professional Services", body: "PI, management liability and cyber done right." },
-            ].map((s) => (
-              <div key={s.tag} className="group rounded-2xl border border-border bg-card p-6 hover:border-accent/50 hover:shadow-elev transition-all">
-                <div className="text-[10px] uppercase tracking-[0.2em] font-bold text-accent">{s.tag}</div>
-                <p className="mt-4 text-ink leading-relaxed">{s.body}</p>
-              </div>
+            ].map((s, i) => (
+              <Reveal key={s.tag} delay={i * 110}>
+                <div className="group rounded-2xl border border-border bg-card p-6 hover:border-accent/50 hover:shadow-elev transition-all">
+                  <div className="text-[10px] uppercase tracking-[0.2em] font-bold text-accent">{s.tag}</div>
+                  <p className="mt-4 text-ink leading-relaxed">{s.body}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -240,7 +253,7 @@ export default function Home() {
           <div className="rounded-3xl border border-border bg-gradient-paper p-10 md:p-16 relative overflow-hidden">
             <div className="absolute inset-0 bg-grid-light opacity-30" />
             <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-accent/15 blur-3xl pointer-events-none" />
-            <div className="relative flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
+            <Reveal className="relative flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
               <div>
                 <h2 className="font-display text-4xl md:text-5xl text-ink leading-[1.02] tracking-tight max-w-2xl">
                   Get the right cover. <span className="text-accent italic">In minutes.</span>
@@ -250,7 +263,7 @@ export default function Home() {
                 </p>
               </div>
               <CTARow primaryLabel="Get my analysis" />
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
