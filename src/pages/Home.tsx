@@ -8,24 +8,16 @@ import logoAnimation from "@/assets/momo-logo-animation.mp4";
 export default function Home() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-white">
+      {/* HERO — background matches the logo video's baked color (#f8f6f3) so
+          the video blends seamlessly with the section */}
+      <section className="relative overflow-hidden bg-[#f8f6f3]">
         <div className="container-atlas relative pt-24 md:pt-32 pb-24 md:pb-32">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Animated brand logo — sits flush on the white hero so it reads
+            {/* Animated brand logo — same background as the hero, so it reads
                 as one with the page */}
             <div className="mx-auto mb-10 w-full max-w-md">
               <video
-                className="aspect-video w-full object-contain bg-white"
-                style={{
-                  // Feather the outer edges so the video's baked cream (#f8f6f3)
-                  // background dissolves into the white hero. Inner ~60% stays
-                  // fully opaque to keep the centered logo crisp.
-                  WebkitMaskImage:
-                    "radial-gradient(ellipse 80% 80% at 50% 50%, #000 58%, transparent 100%)",
-                  maskImage:
-                    "radial-gradient(ellipse 80% 80% at 50% 50%, #000 58%, transparent 100%)",
-                }}
+                className="aspect-video w-full object-contain bg-[#f8f6f3]"
                 src={logoAnimation}
                 autoPlay
                 muted
