@@ -3,6 +3,7 @@ import { ArrowUpRight, Sparkles, Shield, Zap, Scale, Check, Bitcoin, Wallet, Cre
 import { Button } from "@/components/ui/button";
 import { CTARow, SectionHeader } from "@/components/atlas/Bits";
 import { HeroDashboard } from "@/components/atlas/HeroDashboard";
+import logoAnimation from "@/assets/momo-logo-animation.mp4";
 
 export default function Home() {
   return (
@@ -14,6 +15,19 @@ export default function Home() {
         <div className="absolute -bottom-40 -left-40 h-[480px] w-[480px] rounded-full bg-accent/10 blur-[140px] pointer-events-none" />
         <div className="container-atlas relative pt-24 md:pt-32 pb-24 md:pb-32">
           <div className="max-w-4xl mx-auto text-center">
+            {/* Animated brand logo */}
+            <div className="mx-auto mb-10 w-full max-w-md overflow-hidden rounded-2xl">
+              <video
+                className="aspect-video w-full object-contain bg-transparent"
+                src={logoAnimation}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                aria-label="Momo AI logo animation"
+              />
+            </div>
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground backdrop-blur">
               <Sparkles className="h-3 w-3 text-accent" />
               Business insurance, finally simple
