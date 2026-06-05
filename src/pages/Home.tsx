@@ -8,9 +8,9 @@ import logoAnimation from "@/assets/momo-logo-animation.mp4";
 export default function Home() {
   return (
     <>
-      {/* HERO — white background to match the logo video's background so the
-          video blends seamlessly with the section */}
-      <section className="relative overflow-hidden bg-white">
+      {/* HERO — cream white background to match the logo video's background so
+          the video blends seamlessly with the section */}
+      <section className="relative overflow-hidden bg-[#FFFDF8]">
         <div className="container-atlas relative pt-24 md:pt-32 pb-24 md:pb-32">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
             {/* LEFT — copy */}
@@ -42,7 +42,7 @@ export default function Home() {
                 background as the hero, so it reads as one with the page */}
             <div className="order-first lg:order-none -mx-6 sm:mx-0 lg:-mr-8 xl:-mr-16">
               <video
-                className="aspect-video w-full object-contain bg-white"
+                className="aspect-video w-full object-contain bg-[#FFFDF8]"
                 src={logoAnimation}
                 autoPlay
                 muted
