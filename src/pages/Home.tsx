@@ -9,16 +9,14 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-gradient-paper">
-        <div className="absolute inset-0 bg-grid-light opacity-40" />
-        <div className="absolute -top-40 -right-40 h-[560px] w-[560px] rounded-full bg-accent/20 blur-[160px] pointer-events-none" />
-        <div className="absolute -bottom-40 -left-40 h-[480px] w-[480px] rounded-full bg-accent/10 blur-[140px] pointer-events-none" />
+      <section className="relative overflow-hidden bg-white">
         <div className="container-atlas relative pt-24 md:pt-32 pb-24 md:pb-32">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Animated brand logo */}
-            <div className="mx-auto mb-10 w-full max-w-md overflow-hidden rounded-2xl">
+            {/* Animated brand logo — sits flush on the white hero so it reads
+                as one with the page */}
+            <div className="mx-auto mb-10 w-full max-w-md">
               <video
-                className="aspect-video w-full object-contain bg-transparent"
+                className="aspect-video w-full object-contain bg-white"
                 src={logoAnimation}
                 autoPlay
                 muted
