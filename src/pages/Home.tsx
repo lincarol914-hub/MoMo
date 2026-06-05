@@ -17,6 +17,15 @@ export default function Home() {
             <div className="mx-auto mb-10 w-full max-w-md">
               <video
                 className="aspect-video w-full object-contain bg-white"
+                style={{
+                  // Feather the outer edges so the video's baked cream (#f8f6f3)
+                  // background dissolves into the white hero. Inner ~60% stays
+                  // fully opaque to keep the centered logo crisp.
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse 80% 80% at 50% 50%, #000 58%, transparent 100%)",
+                  maskImage:
+                    "radial-gradient(ellipse 80% 80% at 50% 50%, #000 58%, transparent 100%)",
+                }}
                 src={logoAnimation}
                 autoPlay
                 muted
