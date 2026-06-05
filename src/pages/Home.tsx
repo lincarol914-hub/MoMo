@@ -12,7 +12,7 @@ export default function Home() {
           the video blends seamlessly with the section */}
       <section className="relative overflow-hidden bg-[#FFFDF8]">
         <div className="container-atlas relative pt-24 md:pt-32 pb-24 md:pb-32">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+          <div className="grid lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-8 items-center">
             {/* LEFT — copy */}
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground backdrop-blur">
@@ -40,7 +40,7 @@ export default function Home() {
 
             {/* RIGHT — enlarged animated brand logo (on top on mobile). Same
                 background as the hero, so it reads as one with the page */}
-            <div className="order-first lg:order-none -mx-6 sm:mx-0 lg:-mr-8 xl:-mr-16">
+            <div className="order-first lg:order-none -mx-6 sm:mx-0 lg:-my-8 lg:-mr-16 xl:-mr-28">
               <video
                 className="aspect-video w-full object-contain bg-[#FFFDF8]"
                 style={{
