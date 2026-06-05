@@ -49,10 +49,10 @@ export default function Home() {
                   // where both are opaque; the wide central band stays fully
                   // opaque to keep the logo untouched, edges fade to transparent.
                   WebkitMaskImage:
-                    "linear-gradient(to right, transparent 0%, #000 24%, #000 76%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 26%, #000 74%, transparent 100%)",
+                    "linear-gradient(to right, transparent 0%, #000 24%, #000 76%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%)",
                   WebkitMaskComposite: "source-in",
                   maskImage:
-                    "linear-gradient(to right, transparent 0%, #000 24%, #000 76%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 26%, #000 74%, transparent 100%)",
+                    "linear-gradient(to right, transparent 0%, #000 24%, #000 76%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%)",
                   maskComposite: "intersect",
                 }}
                 src={logoAnimation}
