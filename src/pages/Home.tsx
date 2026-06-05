@@ -19,12 +19,12 @@ export default function Home() {
                 <Sparkles className="h-3 w-3 text-accent" />
                 Business insurance, finally simple
               </div>
-              <h1 className="mt-7 font-display text-5xl md:text-6xl lg:text-[80px] leading-[0.98] font-medium tracking-tight text-balance text-ink">
+              <h1 className="mt-7 font-display text-6xl md:text-7xl lg:text-[96px] leading-[0.95] font-medium tracking-tight text-balance text-ink">
                 Cover that
                 <br />
                 <span className="text-accent italic">actually fits.</span>
               </h1>
-              <p className="mt-7 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="mt-7 text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Momo finds the right business insurance for your company in minutes. Clearer cover, fairer prices, no jargon.
               </p>
               <div className="mt-9 flex justify-center lg:justify-start">
