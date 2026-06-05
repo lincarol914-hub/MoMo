@@ -44,13 +44,16 @@ export default function Home() {
               <video
                 className="aspect-video w-full object-contain bg-[#FFFDF8]"
                 style={{
-                  // Strong edge feather: a generous fully-opaque core keeps the
-                  // centered logo untouched, then the edges fade hard to
-                  // transparent so the video melts into the background.
+                  // Strong feather on ALL four edges (left/right AND top/bottom).
+                  // Two linear gradients are intersected so a pixel only shows
+                  // where both are opaque; the wide central band stays fully
+                  // opaque to keep the logo untouched, edges fade to transparent.
                   WebkitMaskImage:
-                    "radial-gradient(ellipse at center, #000 48%, rgba(0,0,0,0.35) 66%, transparent 84%)",
+                    "linear-gradient(to right, transparent 0%, #000 24%, #000 76%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 26%, #000 74%, transparent 100%)",
+                  WebkitMaskComposite: "source-in",
                   maskImage:
-                    "radial-gradient(ellipse at center, #000 48%, rgba(0,0,0,0.35) 66%, transparent 84%)",
+                    "linear-gradient(to right, transparent 0%, #000 24%, #000 76%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 26%, #000 74%, transparent 100%)",
+                  maskComposite: "intersect",
                 }}
                 src={logoAnimation}
                 autoPlay
