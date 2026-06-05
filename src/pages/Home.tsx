@@ -12,10 +12,35 @@ export default function Home() {
           the video blends seamlessly with the section */}
       <section className="relative overflow-hidden bg-[#f8f6f3]">
         <div className="container-atlas relative pt-24 md:pt-32 pb-24 md:pb-32">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Animated brand logo — same background as the hero, so it reads
-                as one with the page */}
-            <div className="mx-auto mb-10 w-full max-w-md">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+            {/* LEFT — copy */}
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground backdrop-blur">
+                <Sparkles className="h-3 w-3 text-accent" />
+                Business insurance, finally simple
+              </div>
+              <h1 className="mt-7 font-display text-5xl md:text-6xl lg:text-[80px] leading-[0.98] font-medium tracking-tight text-balance text-ink">
+                Cover that
+                <br />
+                <span className="text-accent italic">actually fits.</span>
+              </h1>
+              <p className="mt-7 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                Momo finds the right business insurance for your company in minutes. Clearer cover, fairer prices, no jargon.
+              </p>
+              <div className="mt-9 flex justify-center lg:justify-start">
+                <CTARow primaryLabel="Get my analysis" />
+              </div>
+              <div className="mt-10 flex flex-wrap justify-center lg:justify-start items-center gap-x-5 gap-y-2 text-xs text-muted-foreground font-mono">
+                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" /> Free, no obligation</span>
+                <span className="flex items-center gap-1.5"><Check className="h-3 w-3" /> FCA-aware</span>
+                <span className="flex items-center gap-1.5"><Check className="h-3 w-3" /> Human-reviewed</span>
+                <span className="flex items-center gap-1.5"><Bitcoin className="h-3 w-3" /> Pay in crypto or card</span>
+              </div>
+            </div>
+
+            {/* RIGHT — enlarged animated brand logo (on top on mobile). Same
+                background as the hero, so it reads as one with the page */}
+            <div className="order-first lg:order-none -mx-6 sm:mx-0 lg:-mr-8 xl:-mr-16">
               <video
                 className="aspect-video w-full object-contain bg-[#f8f6f3]"
                 src={logoAnimation}
@@ -26,27 +51,6 @@ export default function Home() {
                 preload="auto"
                 aria-label="Momo AI logo animation"
               />
-            </div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground backdrop-blur">
-              <Sparkles className="h-3 w-3 text-accent" />
-              Business insurance, finally simple
-            </div>
-            <h1 className="mt-7 font-display text-5xl md:text-6xl lg:text-[88px] leading-[0.98] font-medium tracking-tight text-balance text-ink">
-              Cover that
-              <br />
-              <span className="text-accent italic">actually fits.</span>
-            </h1>
-            <p className="mt-7 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Momo finds the right business insurance for your company in minutes. Clearer cover, fairer prices, no jargon.
-            </p>
-            <div className="mt-9 flex justify-center">
-              <CTARow primaryLabel="Get my analysis" />
-            </div>
-            <div className="mt-10 flex flex-wrap justify-center items-center gap-x-5 gap-y-2 text-xs text-muted-foreground font-mono">
-              <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" /> Free, no obligation</span>
-              <span className="flex items-center gap-1.5"><Check className="h-3 w-3" /> FCA-aware</span>
-              <span className="flex items-center gap-1.5"><Check className="h-3 w-3" /> Human-reviewed</span>
-              <span className="flex items-center gap-1.5"><Bitcoin className="h-3 w-3" /> Pay in crypto or card</span>
             </div>
           </div>
         </div>
