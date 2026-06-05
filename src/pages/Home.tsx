@@ -40,7 +40,7 @@ export default function Home() {
 
             {/* RIGHT — enlarged animated brand logo (on top on mobile). Same
                 background as the hero, so it reads as one with the page */}
-            <div className="order-first lg:order-none -mx-6 sm:mx-0 lg:ml-auto w-full lg:max-w-xl">
+            <div className="order-first lg:order-none -mx-6 sm:mx-0 lg:ml-auto w-full lg:max-w-2xl lg:-mr-12 xl:-mr-24">
               <video
                 className="aspect-video w-full object-contain bg-[#FFFDF8]"
                 style={{
