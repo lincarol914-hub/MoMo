@@ -46,7 +46,7 @@ export default function Home() {
 
             {/* RIGHT — enlarged animated brand logo (on top on mobile). Same
                 background as the hero, so it reads as one with the page */}
-            <div className="hero-reveal order-first lg:order-none relative z-0 -mx-6 sm:mx-0 w-full lg:max-w-5xl lg:-my-28 lg:-ml-8 lg:-mr-32 xl:-mr-52" style={{ animationDelay: "0.1s", animationDuration: "1.4s" }}>
+            <div className="hero-reveal order-first lg:order-none relative z-0 -mx-6 sm:mx-0 w-full lg:max-w-6xl lg:-my-32 lg:-ml-20 lg:-mr-40 xl:-mr-64" style={{ animationDelay: "0.1s", animationDuration: "1.4s" }}>
               <video
                 className="aspect-video w-full object-contain bg-[#FFFDF8]"
                 style={{
