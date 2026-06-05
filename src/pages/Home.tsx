@@ -19,7 +19,7 @@ export default function Home() {
                 <Sparkles className="h-3 w-3 text-accent" />
                 Business insurance, finally simple
               </div>
-              <h1 className="mt-7 font-display text-6xl md:text-7xl lg:text-[96px] leading-[0.95] font-medium tracking-tight text-balance text-ink">
+              <h1 className="mt-7 font-display text-5xl md:text-6xl lg:text-[64px] leading-[1.0] font-medium tracking-tight text-balance text-ink lg:whitespace-nowrap">
                 Cover that
                 <br />
                 <span className="text-accent italic">actually fits.</span>
